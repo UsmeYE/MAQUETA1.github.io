@@ -9,7 +9,7 @@
 
 body {
     height: 100vh;
-    background-color: #5e4a4a;
+    background-color: #606060;
     background-image: url('https://i.pinimg.com/originals/32/f8/99/32f8993d58712b3d118fb422a4ff9828.jpg');
     background-size: cover;
     background-position: center;
@@ -33,8 +33,12 @@ a:hover {
 /* Header */
 
 header {
-    position: relative;
+    color: transparent;
     padding: 0 2rem;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .navbar {
@@ -114,3 +118,61 @@ section#hero {
     z-index: 10;
 }
 
+/* Ejercicio 2 */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation: slideDown 0.63s forwards;
+}
+
+header.sticky {
+    background-color: rgba(0, 0, 0, 0.46);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
+}
+
+/* Animación para el menú sticky */
+@keyframes slideDown {
+    from {
+        transform: translateY(-5%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Ejercicio 3 */
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text1 {
+    flex: 1;
+    position: sticky;
+    top: 200px;
+    padding-left: 20px;
+}
+
+.text1 h2 {
+    margin-top: 0;
+}
+
+.text1 p {
+    margin-bottom: 10px;
+}
